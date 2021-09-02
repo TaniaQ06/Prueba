@@ -14,16 +14,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @DynamoDBTable(tableName = "books")
 public class Book {
-    private Integer id;
+    private String id;
     private String name;
-    private Integer price;
+    private String price;
 
     @DynamoDBHashKey(attributeName = "id")
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,11 +35,11 @@ public class Book {
         this.name = name;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }
